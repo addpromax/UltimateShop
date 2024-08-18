@@ -28,9 +28,7 @@ public class TaskManager {
             saveFoliaTask = Bukkit.getGlobalRegionScheduler().runAtFixedRate(UltimateShop.instance,
                     task -> {
                         if (!ConfigManager.configManager.getBoolean("auto-save.hide-message")) {
-                            Bukkit.getConsoleSender().sendMessage("§x§9§8§F§B§9§8[UltimateShop] §fAuto saving data...");
-                            Bukkit.getConsoleSender().sendMessage("§x§9§8§F§B§9§8[UltimateShop] §fIf this lead to server TPS drop, " +
-                                    "you should consider disable auto save feature at config.yml!");
+                            Bukkit.getConsoleSender().sendMessage("§x§9§8§F§B§9§8[商店] §f自动保存");
                         }
                         ServerCache.serverCache.shutServerCache(false);
                         for (Player player : Bukkit.getOnlinePlayers()) {
