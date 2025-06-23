@@ -19,7 +19,7 @@ jobs:
           java-version: '21'
           distribution: 'adopt'
       - name: Build Plugin
-        run: ./mvn package
+        run: mvn package
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
